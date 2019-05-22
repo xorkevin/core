@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <section>
+    <div class="container padded narrow">
+      <div>
+        {{ range .Data.Pages }}
+          <div>
+            <a href="{{.RelPermalink}}">{{.Title}}</a>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

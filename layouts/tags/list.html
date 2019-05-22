@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <section>
+    <div class="container narrow padded">
+      <div class="section-header">
+        <h3>Blog | {{.Name}}</h3>
+      </div>
+      {{ partial "blog.html" . }}
+    </div>
+  </section>
+{{ end }}
