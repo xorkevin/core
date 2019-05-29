@@ -5,6 +5,7 @@ VENDORPATH=static/vendor
 all: deps
 
 deps: clean-deps
+	npm ci
 	./deps.sh
 
 clean-deps:
