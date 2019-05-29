@@ -1,0 +1,27 @@
+{
+  "name": "core",
+  "version": "0.1.0",
+  "description": "a simple hugo theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xorkevin/core.git"
+  },
+  "keywords": [
+    "hugo",
+    "theme"
+  ],
+  "author": "xorkevin",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/xorkevin/core/issues"
+  },
+  "homepage": "https://github.com/xorkevin/core#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.2",
+    "mathjax": "^2.7.5"
+  }
+}

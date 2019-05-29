@@ -17,6 +17,7 @@
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
+    <script async src="{{ "vendor/mathjax/mathjax.js" | relURL }}"></script>
     {{ block "scripts" . }}{{ partial "scripts.html" . }}{{ end }}
   </body>
 </html>
