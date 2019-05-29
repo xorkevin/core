@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
     <link href="{{ "vendor/fontawesome/css/all.min.css" | relURL }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{"favicon.ico" | relURL}}" />
+    {{ block "head" . }}{{ partial "head.html" . }}{{ end }}
   </head>
 
   <body>
