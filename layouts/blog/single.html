@@ -33,6 +33,7 @@
     </span>
     {{.Content}}
     <span class="info">
+      <i class="fas fa-fw fa-tags"></i>
       {{ range .Params.tags }}
         <a href='{{ "/tags/" | relURL }}{{ . | urlize }}' class="no-style">
           <span class="chip">{{ . }}</span>
