@@ -1,5 +1,5 @@
 <div class="grid">
-  {{ range where .Data.Pages "Section" "blog" }}
+  {{ range where .RegularPages "Section" "blog" }}
     <div class="col md-12">
       <a class="no-style" href="{{.RelPermalink}}">
         <h3>{{.Title}}</h3>
