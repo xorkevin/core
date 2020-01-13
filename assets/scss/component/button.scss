@@ -1,8 +1,5 @@
-$button-color-outline: lighten($color-primary-light, 12.5%);
-$button-color-background: lighten($color-text-dark-4, 42%);
-
 button {
-  padding: $button-padding $button-padding-h;
+  padding: 8px 16px;
   background-color: transparent;
   border: 0;
   border-radius: 4px;
@@ -14,38 +11,38 @@ button {
   text-align: center;
   transition: $transition-normal;
   cursor: pointer;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: $button-margin;
+  margin-right: $button-margin;
 
   &:hover {
     background-color: $color-accent;
-    color: $white;
+    color: $color-text-light-1;
   }
 
   &:active {
     background-color: $color-accent;
-    color: $white;
+    color: $color-text-light-1;
   }
 
   &.primary {
-    background-color: $color-primary-light;
-    color: $white;
+    background-color: $color-base-light;
+    color: $color-text-light-1;
 
     &:hover {
-      background-color: lighten($color-primary-light, 12.5%);
-      color: $white;
+      background-color: lighten($color-base-light, 12.5%);
+      color: $color-text-light-1;
     }
   }
 
   &.outline {
-    background-color: $white;
-    color: $color-primary-light;
-    border: 1px solid $button-color-outline;
+    background-color: $color-back-light-1;
+    color: $color-base-light;
+    border: 1px solid $color-base-light;
 
     &:hover {
-      background-color: $white;
-      color: lighten($color-primary-light, 12.5%);
-      border-color: lighten($button-color-outline, 12.5%);
+      background-color: $color-back-light-1;
+      color: lighten($color-base-light, 12.5%);
+      border-color: lighten($color-base-light, 12.5%);
     }
   }
 
@@ -54,28 +51,27 @@ button {
     color: $color-text-dark-3;
 
     &:hover {
-      background-color: $button-color-background;
+      background-color: $color-back-dark-4;
       color: $color-text-dark-3;
     }
 
     &.raised {
-      background-color: $white;
+      background-color: $color-back-light-1;
       color: $color-text-dark-3;
 
       &:hover {
-        background-color: $white;
+        background-color: $color-back-light-1;
         color: $color-text-dark-3;
       }
     }
   }
 
   &.raised {
-    box-shadow: $shadow-button;
+    box-shadow: $shadow-box;
     border: 0;
 
     &:hover {
-      box-shadow: $shadow-button-raised;
-      transform: translateY(-1px);
+      box-shadow: $shadow-box-raised;
       border: 0;
     }
   }
@@ -85,7 +81,7 @@ button {
   }
 
   &.fixed-width {
-    min-width: 96px;
+    min-width: $button-min-width;
   }
 
   &:focus {
@@ -106,10 +102,10 @@ body.dark {
       }
 
       &.raised {
-        border: 1px solid $color-text-light-2;
+        background-color: $color-back-light-4;
 
         &:hover {
-          border-color: $color-text-light-1-5;
+          color: $color-text-light-1-5;
         }
       }
     }
@@ -119,7 +115,7 @@ body.dark {
       color: $color-text-light-3;
 
       &:hover {
-        background-color: $color-text-light-4;
+        background-color: $color-back-light-4;
         color: $color-text-light-2;
       }
 
@@ -128,7 +124,7 @@ body.dark {
         color: $color-text-light-3;
 
         &:hover {
-          background-color: $color-text-light-4;
+          background-color: $color-back-light-4;
           color: $color-text-light-2;
         }
       }

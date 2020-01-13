@@ -1,6 +1,6 @@
 article,
 .article {
-  font-size: 1.15rem;
+  font-size: $typography-article-size;
   font-family: $typography-base-font;
   width: 100%;
 
@@ -16,7 +16,7 @@ article,
     margin-bottom: 1rem;
     margin-left: auto;
     margin-right: auto;
-    width: 42rem;
+    width: $typography-article-width;
     display: block;
   }
 

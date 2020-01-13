@@ -1,3 +1,6 @@
+$card-padding: 8px;
+$card-padding-h: 20px;
+
 .card {
   box-shadow: $shadow-box;
   border-radius: 4px;
@@ -15,6 +18,11 @@
   & > *:first-child {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+
+    & > *:first-child {
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+    }
 
     &:before {
       border-top-left-radius: 4px;
@@ -53,29 +61,24 @@
       h4,
       h5,
       h6 {
-        font-weight: 300;
+        font-weight: 400;
         text-shadow: $shadow-text;
         margin: 0;
       }
 
       button {
         color: $color-text-light-1;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
       }
     }
   }
 
   & > .title-bar {
-    letter-spacing: 1px;
-
     & > .title-inner {
       padding: $card-padding $card-padding-h;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      color: $color-primary;
-      background-color: $white;
+      background-color: $color-back-light-1;
 
       h1,
       h2,
@@ -96,7 +99,7 @@
   & > .body,
   & > .bar {
     padding: $card-padding $card-padding-h;
-    background-color: $white;
+    background-color: $color-back-light-1;
     color: $color-text-dark-1-5;
   }
 
@@ -114,7 +117,7 @@
       top: 0;
       background: linear-gradient(
         transparent calc(100% - 1em),
-        rgba($white, 0.7)
+        rgba($color-back-light-1, 0.7)
       );
       pointer-events: none;
     }
@@ -199,13 +202,13 @@ body.dark {
 
     & > .title-bar {
       & > .title-inner {
-        background-color: $color-primary-dark;
+        background-color: $color-back-base-dark-2;
       }
     }
 
     & > .body,
     & > .bar {
-      background-color: $color-primary-dark;
+      background-color: $color-back-base-dark-2;
       color: $color-text-light-2;
     }
 
@@ -213,7 +216,7 @@ body.dark {
       &:before {
         background: linear-gradient(
           transparent calc(100% - 1em),
-          rgba($color-primary-dark, 0.7)
+          rgba($color-back-base-dark-2, 0.7)
         );
       }
     }

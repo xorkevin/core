@@ -10,9 +10,10 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-color: $color-body-background;
 
   &.dark {
-    background-color: $background-dark;
+    background-color: $color-back-base-dark-1;
     color: $color-text-light-1-5;
   }
 }
@@ -54,5 +55,5 @@ table {
 }
 
 :root {
-  background-color: $background-dark;
+  background-color: $color-back-base-dark-1;
 }
