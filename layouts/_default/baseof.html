@@ -8,6 +8,8 @@
     {{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
     <link href="{{ "vendor/fontawesome/css/all.min.css" | relURL }}" rel="stylesheet">
+    <link href="{{ "vendor/inter-ui/inter.css" | relURL }}" rel="stylesheet">
+    <link href="{{ "vendor/merriweather/index.css" | relURL }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{"favicon.ico" | relURL}}" />
     {{ block "head" . }}{{ partial "head.html" . }}{{ end }}
   </head>
