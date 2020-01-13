@@ -7,7 +7,7 @@
     <meta name="generator" content="xorkevin/core; Hugo v{{hugo.Version}}">
     {{ $styles := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
-    <link href="{{ "vendor/fontawesome/css/all.min.css" | relURL }}" rel="stylesheet">
+    <link href="{{ "vendor/fork-awesome/css/fork-awesome.min.css" | relURL }}" rel="stylesheet">
     <link href="{{ "vendor/inter-ui/inter.css" | relURL }}" rel="stylesheet">
     <link href="{{ "vendor/merriweather/index.css" | relURL }}" rel="stylesheet">
     <link rel="shortcut icon" href="{{"favicon.ico" | relURL}}" />

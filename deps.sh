@@ -3,7 +3,7 @@
 vendorpath=static/vendor
 mkdir -p $vendorpath
 
-output=$vendorpath/fontawesome
+output=$vendorpath/fork-awesome
 mkdir -p $output
 mkdir -p $output/css
 cp node_modules/fork-awesome/css/fork-awesome.min.css $output/css
