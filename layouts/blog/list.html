@@ -1,7 +1,16 @@
 {{ define "main" }}
   <section>
     <div class="container narrow padded">
-      {{ partial "blog.html" . }}
+      <div class="section-header">
+        <h1>Blog</h1>
+      </div>
+      <div class="grid">
+        {{ range .RegularPages }}
+        <div class="col md-12">
+          {{ partial "blogpost.html" . }}
+        </div>
+        {{ end }}
+      </div>
     </div>
   </section>
 {{ end }}

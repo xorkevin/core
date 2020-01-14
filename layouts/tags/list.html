@@ -5,7 +5,13 @@
         <h1>Blog</h1>
         <h3><small><i class="fa fa-fw fa-tag"></i></small> {{.Name}}</h3>
       </div>
-      {{ partial "blog.html" . }}
+      <div class="grid">
+        {{ range where .RegularPages "Section" "blog" }}
+        <div class="col md-12">
+          {{ partial "blogpost.html" . }}
+        </div>
+        {{ end }}
+      </div>
     </div>
   </section>
 {{ end }}

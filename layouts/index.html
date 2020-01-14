@@ -8,7 +8,13 @@
       <div class="section-header">
         <h1>Blog</h1>
       </div>
-      {{ partial "blog.html" . }}
+      <div class="grid">
+        {{ range where .Site.RegularPages "Section" "blog" }}
+        <div class="col md-12">
+          {{ partial "blogpost.html" . }}
+        </div>
+        {{ end }}
+      </div>
     </div>
   </section>
 {{ end }}
