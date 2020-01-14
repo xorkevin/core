@@ -28,12 +28,12 @@
       </span>
     </span>
     <span class="info small">
-      <a target="_blank" rel="noopener noreferrer" href="{{.Permalink}}"><i class="fas fa-fw fa-link"></i> Permalink</a>
-      {{ with .Params.projecturl }}&middot; <a target="_blank" rel="noopener noreferrer" href="{{.}}"><i class="fas fa-fw fa-code-branch"></i> Repo</a>{{ end }}
+      <a target="_blank" rel="noopener noreferrer" href="{{.Permalink}}"><i class="fa fa-fw fa-link"></i> Permalink</a>
+      {{ with .Params.projecturl }}&middot; <a target="_blank" rel="noopener noreferrer" href="{{.}}"><i class="fa fa-fw fa-code-fork"></i> Repo</a>{{ end }}
     </span>
     {{.Content}}
     <span class="info">
-      <i class="fas fa-fw fa-tags"></i>
+      <i class="fa fa-fw fa-tags"></i>
       {{ range .Params.tags }}
         <a href='{{ "/tags/" | relURL }}{{ . | urlize }}' class="no-style">
           <span class="chip">{{ . }}</span>
@@ -63,7 +63,7 @@
           {{ with .PrevInSection }}
             <div>
               <a href="{{.RelPermalink}}" class="no-style">
-                <h6><i class="fas fa-fw fa-chevron-left"></i> Prev</h6>
+                <h6><i class="fa fa-fw fa-chevron-left"></i> Prev</h6>
                 <h4>
                   {{.Title}}
                 </h4>
@@ -78,7 +78,7 @@
           {{ with .NextInSection }}
             <div>
               <a href="{{.RelPermalink}}" class="no-style text-right">
-                <h6>Next <i class="fas fa-fw fa-chevron-right"></i></h6>
+                <h6>Next <i class="fa fa-fw fa-chevron-right"></i></h6>
                 <h4>
                   {{.Title}}
                 </h4>
