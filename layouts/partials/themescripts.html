@@ -1,7 +1,5 @@
 <script>
-(() => {
   const darkModeClassname = 'dark';
-  const darkModeButtonId = 'dark-mode-button';
   const darkModeStorageId = 'dark-mode';
   const darkModeStorageEnable = 'enabled';
   const darkModeStorageDisable = 'disabled';
@@ -15,23 +13,14 @@
     window.localStorage.setItem(darkModeStorageId, dark ? darkModeStorageEnable : darkModeStorageDisable);
   };
 
-  window.addEventListener('DOMContentLoaded', (event) => {
-    let darkModeState = false;
-    if (window.localStorage.getItem(darkModeStorageId) === darkModeStorageEnable) {
-      darkModeState = true;
-    }
+  let darkModeState = false;
+  if (window.localStorage.getItem(darkModeStorageId) === darkModeStorageEnable) {
+    darkModeState = true;
+  }
+  setDarkMode(darkModeState);
+
+  const darkModeToggle = (event) => {
+    darkModeState = !darkModeState;
     setDarkMode(darkModeState);
-
-    const darkModeButton = document.getElementById(darkModeButtonId);
-    if (!darkModeButton) {
-      return;
-    }
-
-    const darkModeToggle = (event) => {
-      darkModeState = !darkModeState;
-      setDarkMode(darkModeState);
-    };
-    darkModeButton.addEventListener('click', darkModeToggle);
-  });
-})();
+  };
 </script>
