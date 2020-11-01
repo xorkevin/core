@@ -1,0 +1,12 @@
+name: 'Kevin Wang'
+bio: 'Web dev. Experiences decision fatigue daily.'
+taghtml: 'web dev | powered by coffee <i class="fa fa-fw fa-coffee"></i>'
+tagheader: 'full stack web developer'
+location: 'Bay Area'
+employment: 'Engineering @ Company'
+image: ''
+resume: ''
+email: 'personal@example.org'
+social:
+  github: 'xorkevin'
+  twitter: 'xorkevin'

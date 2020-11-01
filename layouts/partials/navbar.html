@@ -1,17 +1,17 @@
 <nav>
-  <div class="nav-container">
-    <div class="container">
-      <div class="element">
-        <div class="item">
-          <a href='{{"/" | relURL}}'>Home</a>
-        </div>
-        <div class="item">
-          <a href='{{"blog" | relURL}}'>Blog</a>
+  <div class="container fill nav-container">
+    <div class="grid fill justify-space-between nav-elements">
+      <div class="col element">
+        <div class="grid strict fill nav-items">
+          <a class="nav-item" href='{{"/" | relURL}}'>Home</a>
+          <a class="nav-item" href='{{"blog" | relURL}}'>Blog</a>
         </div>
       </div>
-      <div class="element">
-        <div class="item">
-          <i class="fa fa-lg fa-moon" onclick="darkModeToggle()"></i>
+      <div class="col element">
+        <div class="grid strict fill nav-items">
+          <div class="col nav-item" onclick="darkModeToggle()">
+            <i class="fa fa-lg fa-moon"></i>
+          </div>
         </div>
       </div>
     </div>

@@ -1,17 +1,16 @@
 {{ define "main" }}
-  <section>
-    <div class="container narrow padded">
-      <div class="section-header">
-        <h1>Blog</h1>
-        <h3><small><i class="fa fa-fw fa-tag"></i></small> {{.Name}}</h3>
-      </div>
-      <div class="grid">
+  <div class="container padded narrow">
+    <section>
+      <h2>Blog</h2>
+      <h3><small><i class="fa fa-fw fa-tag"></i></small> {{.Name}}</h3>
+      <hr/>
+      <div class="grid col md-12">
         {{ range where .RegularPages "Section" "blog" }}
         <div class="col md-12">
           {{ partial "blogpost.html" . }}
         </div>
         {{ end }}
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 {{ end }}

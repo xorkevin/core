@@ -1,20 +1,18 @@
 {{ define "title"}}
-  xorkevin
+  Core
 {{ end }}
 {{ define "main" }}
   {{ block "header" . }}{{ partial "header.html" . }}{{ end }}
-  <section>
-    <div class="container narrow padded">
-      <div class="section-header">
-        <h1>Blog</h1>
-      </div>
-      <div class="grid">
+  <div class="container padded narrow">
+    <section>
+      <h2>Blog</h2>
+      <div class="grid align-flex-start">
         {{ range where .Site.RegularPages "Section" "blog" }}
         <div class="col md-12">
           {{ partial "blogpost.html" . }}
         </div>
         {{ end }}
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 {{ end }}

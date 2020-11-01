@@ -1,7 +1,7 @@
-<a class="no-style" href="{{.RelPermalink}}">
+<a href="{{.RelPermalink}}">
   <h3>{{.Title}}</h3>
 </a>
-<a class="no-style" href="{{.RelPermalink}}">
+<a href="{{.RelPermalink}}">
   <div>
     <p>
       {{.Params.description}}
@@ -9,21 +9,21 @@
   </div>
 </a>
 <div>
-  <span class="tooltip-parent">
-    {{ with .Lastmod }}
-      <span class="tooltip top">
-        Last modified {{ dateFormat "2006-01-02" . }}
-      </span>
-    {{ end }}
+  <span class="tooltip">
     {{ dateFormat "Mon, Jan 2, 2006" .Date }}
+    {{ with .Lastmod }}
+    <span class="text top">
+      Last modified {{ dateFormat "2006-01-02" . }}
+    </span>
+    {{ end }}
   </span>
   &middot;
-  <span class="tooltip-parent">
-    {{ with .WordCount }}
-      <span class="tooltip top">
-        {{.}} Words
-      </span>
-    {{ end }}
+  <span class="tooltip">
     {{.ReadingTime}} min read
+    {{ with .WordCount }}
+    <span class="text top">
+      {{.}} Words
+    </span>
+    {{ end }}
   </span>
 </div>

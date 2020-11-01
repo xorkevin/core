@@ -1,0 +1,124 @@
+$tooltip-arrow-border: 8px solid $black;
+
+.tooltip {
+  position: relative;
+
+  & > .text {
+    position: absolute;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    background-color: $black;
+    color: $white;
+    font-size: 0.85rem;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $transition-normal;
+    z-index: 64;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      z-index: -1;
+    }
+
+    &.left {
+      right: calc(100% + 12px);
+      top: 50%;
+      transform: translateY(-50%);
+
+      &:before {
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: $tooltip-arrow-border;
+        left: calc(100% - 1px);
+        top: calc(50% - 8px);
+      }
+    }
+
+    &.right {
+      left: calc(100% + 12px);
+      top: 50%;
+      transform: translateY(-50%);
+
+      &:before {
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: $tooltip-arrow-border;
+        right: calc(100% - 1px);
+        top: calc(50% - 8px);
+      }
+    }
+
+    &.top {
+      bottom: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%);
+
+      &:before {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: $tooltip-arrow-border;
+        top: calc(100% - 1px);
+        left: calc(50% - 8px);
+      }
+    }
+
+    &.bottom {
+      top: calc(100% + 12px);
+      left: 50%;
+      transform: translateX(-50%);
+
+      &:before {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: $tooltip-arrow-border;
+        bottom: calc(100% - 1px);
+        left: calc(50% - 8px);
+      }
+    }
+  }
+
+  &:hover {
+    & > .text {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+$tooltip-arrow-border-dark: 8px solid $white;
+
+.dark .tooltip {
+  & > .text {
+    background-color: $white;
+    color: $black;
+
+    &.left {
+      &:before {
+        border-left: $tooltip-arrow-border-dark;
+      }
+    }
+
+    &.right {
+      &:before {
+        border-right: $tooltip-arrow-border-dark;
+      }
+    }
+
+    &.top {
+      &:before {
+        border-top: $tooltip-arrow-border-dark;
+      }
+    }
+
+    &.bottom {
+      &:before {
+        border-bottom: $tooltip-arrow-border-dark;
+      }
+    }
+  }
+}

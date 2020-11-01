@@ -2,61 +2,45 @@
   <div class="container padded narrow">
     {{ with $.Site.Params.author }}
       {{ $author := index $.Site.Data.authors . }}
-      <div class="grid horizontal-center">
+      <div class="grid justify-center align-center dark">
         <div class="col sm-8">
           <div class="text-center">
-            <h4 class="title">{{$author.name}}</h4>
+            <h4 class="footer-header">{{$author.name}}</h4>
             {{$author.taghtml | safeHTML}}
-          </div>
-        </div>
-        <div class="col sm-8">
-          <div class="text-center">
             <h5 class="title">contact me</h5>
             <ul>
               {{ with $author.resume }}
-                <li>
-                  <a class="no-color" target="_blank" rel="noopener noreferrer" href='{{. | relURL}}'>
-                    <i class="fa fa-fw fa-file-text"></i> Resume
-                  </a>
-                </li>
+              <li>
+                <a class="no-color" target="_blank" rel="noopener noreferrer" href='{{. | relURL}}'>
+                  <i class="fa fa-fw fa-file-text"></i> Resume
+                </a>
+              </li>
               {{ end }}
               {{ with $author.social.github }}
-                <li>
-                  <a class="no-color" target="_blank" rel="noopener noreferrer" href='https://github.com/{{.}}'>
-                    <i class="fa fa-fw fa-github"></i> {{.}}@github
-                  </a>
-                </li>
+              <li>
+                <a class="no-color" target="_blank" rel="noopener noreferrer" href='https://github.com/{{.}}'>
+                  <i class="fa fa-fw fa-github"></i> {{.}}@github
+                </a>
+              </li>
               {{ end }}
               {{ with $author.social.twitter }}
-                <li>
-                  <a class="no-color" target="_blank" rel="noopener noreferrer" href='https://twitter.com/{{.}}'>
-                    <i class="fa fa-fw fa-twitter"></i> {{.}}@twitter
-                  </a>
-                </li>
+              <li>
+                <a class="no-color" target="_blank" rel="noopener noreferrer" href='https://twitter.com/{{.}}'>
+                  <i class="fa fa-fw fa-twitter"></i> {{.}}@twitter
+                </a>
+              </li>
               {{ end }}
               {{ with $author.email }}
-                <li>
-                  <a class="no-color" target="_blank" rel="noopener noreferrer" href="mailto:{{.}}">
-                    <i class="fa fa-fw fa-envelope"></i> {{.}}
-                  </a>
-                </li>
+              <li>
+                <a class="no-color" target="_blank" rel="noopener noreferrer" href="mailto:{{.}}">
+                  <i class="fa fa-fw fa-envelope"></i> {{.}}
+                </a>
+              </li>
               {{ end }}
-            </ul>
-          </div>
-        </div>
-        <div class="col sm-8">
-          <div class="text-center">
-            <ul>
-              {{ with $author.social.github }}
-                <li>
-                  <span>
-                    <i class="fa fa-fw fa-code"></i> with <i class="fa fa-fw fa-heart"></i> by <a class="no-color" target="_blank" rel="noopener noreferrer" href="https://github.com/{{.}}"><i class="fa fa-fw fa-github"></i> {{.}}</a>
-                  </span>
-                </li>
-              {{ end }}
+              <br/>
               <li>
                 <span>
-                  themed with <a class="no-color" target="_blank" rel="noopener noreferrer" href="https://github.com/xorkevin/xorkevin">xorkevin/core</a>
+                  themed with <a class="no-color" target="_blank" rel="noopener noreferrer" href="https://github.com/xorkevin/core">xorkevin/core</a>
                 </span>
               </li>
               {{ with $.Site.Copyright }}
@@ -64,7 +48,7 @@
                   <span>
                     &copy; {{$author.name}}
                     {{ $curyear := now.Format "2006" }}
-                    {{ if eq .  $curyear }}
+                    {{ if eq . $curyear }}
                       {{.}}
                     {{ else }}
                       {{.}}-{{$curyear}}

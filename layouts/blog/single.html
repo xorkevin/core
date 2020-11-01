@@ -1,68 +1,71 @@
 {{ define "main" }}
   <section>
-  </section>
-  <article>
-    <h1 class="title">{{.Title}}</h1>
-    <h3 class="subtitle">{{.Params.description}}</h3>
-    {{ with .Params.author }}
-      {{ $author := index $.Site.Data.authors . }}
-      <h5>{{$author.name}}</h5>
-    {{ end }}
-    <span class="info">
-      <span class="tooltip-parent">
-        {{ with .Lastmod }}
-          <span class="tooltip top">
+    <article>
+      <h1 class="title">{{.Title}}</h1>
+      <h3 class="subtitle">{{.Params.description}}</h3>
+      <span class="info">
+        {{ with .Params.author }}
+        {{ $author := index $.Site.Data.authors . }}
+        {{$author.name}} &middot;
+        {{ end }}
+        <span class="tooltip">
+          {{ dateFormat "Mon, Jan 2, 2006" .Date }}
+          {{ with .Lastmod }}
+          <span class="text top">
             Last modified {{ dateFormat "2006-01-02" . }}
           </span>
-        {{ end }}
-        {{ dateFormat "Mon, Jan 2, 2006" .Date }}
-      </span>
-      &middot;
-      <span class="tooltip-parent">
-        {{ with .WordCount }}
-          <span class="tooltip top">
+          {{ end }}
+        </span>
+        &middot;
+        <span class="tooltip">
+          {{.ReadingTime}} min read
+          {{ with .WordCount }}
+          <span class="text top">
             {{.}} Words
           </span>
-        {{ end }}
-        {{.ReadingTime}} min read
+          {{ end }}
+        </span>
       </span>
-    </span>
-    <span class="info small">
-      <a target="_blank" rel="noopener noreferrer" href="{{.Permalink}}"><i class="fa fa-fw fa-link"></i> Permalink</a>
-      {{ with .Params.projecturl }}&middot; <a target="_blank" rel="noopener noreferrer" href="{{.}}"><i class="fa fa-fw fa-code-fork"></i> Repo</a>{{ end }}
-    </span>
-    {{.Content}}
-    <span class="info">
-      <i class="fa fa-fw fa-tags"></i>
-      {{ range .Params.tags }}
-        <a href='{{ "/tags/" | relURL }}{{ . | urlize }}' class="no-style">
+      <span class="info">
+        <a class="text" target="_blank" rel="noopener noreferrer" href="{{.Permalink}}"><i class="fa fa-fw fa-link"></i> Permalink</a>
+        {{ with .Params.projecturl }}&middot; <a class="text" target="_blank" rel="noopener noreferrer" href="{{.}}"><i class="fa fa-fw fa-code-fork"></i> Repo</a>{{ end }}
+      </span>
+      {{.Content}}
+      <span class="info">
+        <i class="fa fa-fw fa-tags"></i>
+        {{ range .Params.tags }}
+        <a href='{{ "/tags/" | relURL }}{{ . | urlize }}'>
           <span class="chip">{{ . }}</span>
         </a>
-      {{ end }}
-    </span>
-    <hr />
-    {{ with .Params.author }}
+        {{ end }}
+      </span>
+      <hr />
+      {{ with .Params.author }}
       {{ $author := index $.Site.Data.authors . }}
       <div>
-        <div class="author">
-          <div class="image round">
-            <img src='{{$author.image | relURL}}' />
+        <div class="grid strict nowrap align-center author">
+          {{ if $author.image }}
+          <div class="col image" style="flex-shrink: 0;">
+            <div class="img sized fill circle loaded">
+              <div class="inner">
+                <img class="image" src='{{$author.image | relURL}}' />
+              </div>
+            </div>
           </div>
-          <div class="description">
+          {{ end }}
+          <div class="col description">
             <h4 class="name">{{$author.name}}</h4>
             <div class="bio">{{$author.bio}}</div>
           </div>
         </div>
       </div>
-    {{ end }}
-  </article>
-  <section>
-    <div class="container">
-      <div class="grid horizontal-center">
-        <div class="col xs-22 sm-10 md-7 lg-5">
-          {{ with .PrevInSection }}
+      {{ end }}
+      <section class="other-articles">
+        <div class="grid">
+          <div class="col xs-12">
+            {{ with .PrevInSection }}
             <div>
-              <a href="{{.RelPermalink}}" class="no-style">
+              <a href="{{.RelPermalink}}">
                 <h6><i class="fa fa-fw fa-chevron-left"></i> Prev</h6>
                 <h4>
                   {{.Title}}
@@ -72,12 +75,12 @@
                 </p>
               </a>
             </div>
-          {{end}}
-        </div>
-        <div class="col xs-22 sm-10 md-7 lg-5">
-          {{ with .NextInSection }}
+            {{end}}
+          </div>
+          <div class="col xs-12">
+            {{ with .NextInSection }}
             <div>
-              <a href="{{.RelPermalink}}" class="no-style text-right">
+              <a href="{{.RelPermalink}}" class="text-right">
                 <h6>Next <i class="fa fa-fw fa-chevron-right"></i></h6>
                 <h4>
                   {{.Title}}
@@ -87,9 +90,10 @@
                 </p>
               </a>
             </div>
-          {{end}}
+            {{end}}
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </article>
   </section>
 {{ end }}

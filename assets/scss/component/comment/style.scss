@@ -1,0 +1,57 @@
+.comment {
+  width: 100%;
+  margin: 1rem 0;
+
+  & > .inner {
+    width: $comment-width;
+    max-width: 100%;
+
+    & > .info > .data {
+      &:not(:first-child) {
+        margin: 4px;
+      }
+
+      &:not(.username) {
+        font-family: monospace;
+        font-size: 0.85rem;
+        color: $color-text-dark-2;
+      }
+    }
+
+    & > .content {
+      padding: 0 8px;
+    }
+
+    & > .options {
+      font-size: 0.85rem;
+
+      & > * {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  & > .children {
+    margin: 0 0 0 8px;
+    border-left: 1px solid $color-back-dark-3;
+    padding: 0 0 0 8px;
+  }
+}
+
+.comment-section {
+  width: 100%;
+}
+
+.dark .comment {
+  & > .inner {
+    & > .info {
+      .data {
+        color: $color-text-light-2;
+      }
+    }
+  }
+
+  & > .children {
+    border-color: $color-back-light-3;
+  }
+}

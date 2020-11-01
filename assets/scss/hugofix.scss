@@ -21,8 +21,14 @@ header.main {
   }
 }
 
-article,
-.article {
+article {
+  .other-articles {
+    p {
+      margin: unset;
+      font-family: unset;
+    }
+  }
+
   .footnotes {
     font-size: 1rem;
 

@@ -1,0 +1,11 @@
+baseURL: 'http://example.org/'
+languageCode: 'en-us'
+title: 'Core'
+theme: 'core'
+pluralizelisttitles: 'false'
+footnoteReturnLinkContents: '&larrhk;'
+copyright: 2020
+permalinks:
+  blog: '/:section/:year/:month/:title'
+params:
+  author: 'xorkevin'

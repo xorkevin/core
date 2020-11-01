@@ -1,0 +1,40 @@
+.popover-root {
+  position: fixed;
+  width: 0;
+  height: 0;
+  z-index: 128;
+
+  & > .popover {
+    position: absolute;
+    z-index: 1;
+    transition: $transition-fast;
+
+    &.wait {
+      opacity: 0;
+    }
+
+    &.bottom {
+      top: 0;
+      left: 0;
+      transform: translateX(-50%);
+    }
+
+    &.top {
+      bottom: 0;
+      left: 0;
+      transform: translateX(-50%);
+    }
+
+    &.left {
+      top: 0;
+      right: 0;
+      transform: translateY(-50%);
+    }
+
+    &.right {
+      top: 0;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
