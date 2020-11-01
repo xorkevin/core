@@ -9,3 +9,4 @@ permalinks:
   blog: '/:section/:year/:month/:title'
 params:
   author: 'xorkevin'
+  headerbackground: '/img/home/background.jpg'

@@ -4,7 +4,7 @@ taghtml: 'web dev | powered by coffee <i class="fa fa-fw fa-coffee"></i>'
 tagheader: 'full stack web developer'
 location: 'Bay Area'
 employment: 'Engineering @ Company'
-image: ''
+image: 'img/authors/usericon.png'
 resume: ''
 email: 'personal@example.org'
 social:

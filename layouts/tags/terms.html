@@ -1,6 +1,7 @@
 {{ define "main" }}
   <div class="container padded narrow">
     <section>
+      <h2>Tags</h2>
       <div class="grid align-flex-start">
         {{ range $key, $value := .Data.Terms.ByCount }}
         <div class="col sm-8 md-6">

@@ -1,5 +1,6 @@
 <div class="home-header">
-  <div class="img sized fill dark loaded">
+  {{ $background := $.Site.Params.headerbackground }}
+  <div class="img sized fill{{ if $background }} dark{{ end }} loaded">
     <div class="inner">
       {{ with $.Site.Params.author }}
       {{ $author := index $.Site.Data.authors . }}
@@ -16,7 +17,9 @@
         </div>
       </div>
       {{ end }}
-      <img class="image" src="/img/home/background.jpg">
+      {{ with $background }}
+      <img class="image" src="{{.}}">
+      {{ end }}
     </div>
   </div>
 </div>
