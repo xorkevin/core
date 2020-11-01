@@ -1,18 +1,22 @@
-<div class="img sized lg">
-  <div class="inner">
-    {{ with $.Site.Params.author }}
+<div class="home-header">
+  <div class="img sized fill dark loaded">
+    <div class="inner">
+      {{ with $.Site.Params.author }}
       {{ $author := index $.Site.Data.authors . }}
       <div class="children">
-        <header class="main">
-          <div class="container padded narrow">
-            <h1 class="title">{{$author.name}}</h1>
-            <h4 class="subtitle">{{$author.tagheader}}</h4>
-            <div>{{$author.employment}}</div>
-            <div>{{$author.location}}</div>
+        <div class="container fill padded narrow">
+          <div class="grid fill align-center">
+            <header>
+              <h1 class="title">{{$author.name}}</h1>
+              <h4 class="subtitle">{{$author.tagheader}}</h4>
+              <div>{{$author.employment}}</div>
+              <div>{{$author.location}}</div>
+            </header>
           </div>
-        </header>
+        </div>
       </div>
-    {{ end }}
-    <img class="image" src="/img/home/background.jpg">
+      {{ end }}
+      <img class="image" src="/img/home/background.jpg">
+    </div>
   </div>
 </div>
