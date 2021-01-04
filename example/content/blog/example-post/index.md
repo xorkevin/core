@@ -60,14 +60,14 @@ type (
 {{<core/img class="inset-half" src="/img/home/background.jpg">}}
 
 {{<core/row class="outset-double">}}
-{{<core/img class="col" src="/img/home/background.jpg">}}
-{{<core/img class="col" src="/img/home/background.jpg">}}
-{{<core/img class="col" src="/img/home/background.jpg">}}
+{{<core/img class="col mw-0" src="/img/home/background.jpg">}}
+{{<core/img class="col mw-0" src="/img/home/background.jpg">}}
+{{<core/img class="col mw-0" src="/img/home/background.jpg">}}
 {{</core/row>}}
 
 {{<core/row class="outset">}}
-{{<core/img class="col" src="/img/home/background.jpg">}}
-{{<core/img class="col" src="/img/home/background.jpg">}}
+{{<core/img class="col mw-0" src="/img/home/background.jpg">}}
+{{<core/img class="col mw-0" src="/img/home/background.jpg">}}
 {{</core/row>}}
 
 {{<core/caption cap="A caption for these images">}}

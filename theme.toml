@@ -5,7 +5,7 @@ description = "a simple blog theme for hugo"
 homepage = "http://github.com/xorkevin/core"
 tags = []
 features = []
-min_version = "0.55"
+min_version = "0.71"
 
 [author]
   name = "Kevin Wang"

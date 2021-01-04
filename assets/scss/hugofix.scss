@@ -14,6 +14,25 @@
 }
 
 article {
+  .article-heading {
+    position: relative;
+
+    & > .article-heading-anchor {
+      display: inline;
+      position: absolute;
+      left: 0;
+      transform: translateX(-100%);
+      opacity: 0;
+      transition: $transition-normal;
+    }
+
+    &:hover {
+      & > .article-heading-anchor {
+        opacity: 1;
+      }
+    }
+  }
+
   .other-articles {
     p {
       margin: unset;
@@ -34,4 +53,12 @@ article {
       margin-bottom: 0;
     }
   }
+}
+
+.mw-0 {
+  min-width: 0;
+}
+
+.article-heading-anchor {
+  display: none;
 }
