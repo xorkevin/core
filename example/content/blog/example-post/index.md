@@ -45,6 +45,13 @@ type (
 1. and ordered
 2. elements
 
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+
 ### Images
 
 {{<core/img class="fullwidth" src="/img/home/background.jpg">}}

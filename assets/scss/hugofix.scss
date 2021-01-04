@@ -15,20 +15,15 @@
 
 article {
   .article-heading {
-    position: relative;
-
     & > .article-heading-anchor {
       display: inline;
-      position: absolute;
-      left: 0;
-      transform: translateX(-100%);
       opacity: 0;
       transition: $transition-normal;
     }
 
     &:hover {
       & > .article-heading-anchor {
-        opacity: 1;
+        opacity: 0.5;
       }
     }
   }
