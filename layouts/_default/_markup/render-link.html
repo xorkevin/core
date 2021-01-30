@@ -1,1 +1,1 @@
-<a class="text" href="{{ .Destination }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Text }}</a>
+<a class="text{{ if strings.HasPrefix .Destination "http" }} ext{{ end }}" href="{{ .Destination }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Text }}</a>

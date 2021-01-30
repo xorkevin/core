@@ -22,6 +22,10 @@ href="https://github.com/xorkevin/nuke" ext="1" />}}
 It supports many features that can be easily composed[^xkcd:software] but not
 do too much[^xkcd:autoconfig].
 
+> This is a blockquote.
+>
+> > This blockquote is nested.
+
 [^xkcd:software]: XKCD 2021 {{<core/anchor href="https://xkcd.com/2021/" ext="1" />}}
 [^xkcd:autoconfig]: XKCD 416 {{<core/anchor href="https://xkcd.com/416/" ext="1" />}}
 

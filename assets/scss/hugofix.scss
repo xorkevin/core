@@ -1,3 +1,9 @@
+a.ext {
+  &:after {
+    content: '\2197';
+  }
+}
+
 .home-header {
   height: 768px;
   letter-spacing: 1px;
