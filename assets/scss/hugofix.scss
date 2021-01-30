@@ -28,6 +28,26 @@ article {
     }
   }
 
+  a.footnote-ref {
+    display: inline-block;
+    min-width: 24px;
+    padding: 0 4px;
+    margin: 0 4px;
+    border: 1px solid $color-text-dark-1;
+    text-align: center;
+    line-height: 1.25;
+    transition: $transition-normal;
+
+    &:hover {
+      background-color: $color-text-dark-1;
+      color: $color-text-light-1;
+    }
+  }
+
+  a.footnote-backref {
+    color: $color-primary-3;
+  }
+
   .other-articles {
     p {
       margin: unset;
@@ -56,4 +76,22 @@ article {
 
 .article-heading-anchor {
   display: none;
+}
+
+.dark {
+  article {
+    a.footnote-ref {
+      border-color: $color-text-light-1;
+      color: $color-text-light-1;
+
+      &:hover {
+        background-color: $color-text-light-1;
+        color: $color-text-dark-1;
+      }
+    }
+
+    a.footnote-backref {
+      color: $color-accent-light;
+    }
+  }
 }
